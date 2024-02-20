@@ -309,6 +309,9 @@ public class RNZoomUsModule extends ReactContextBaseJavaModule implements ZoomSD
             return;
           }
 
+          zoomSDK.getZoomUIService().disablePIPMode(false);
+          zoomSDK.getZoomUIService().enableMinimizeMeeting(false);
+          
           final MeetingService meetingService = zoomSDK.getMeetingService();
 
           JoinMeetingOptions opts = new JoinMeetingOptions();
